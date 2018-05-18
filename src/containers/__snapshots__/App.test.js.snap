@@ -31,7 +31,10 @@ ShallowWrapper {
         <Route
                 component={[Function]}
                 exact={true}
-                path="/Rvsp"
+                path="/rvsp"
+        />
+        <Route
+                component={[Function]}
         />
 </Switch>,
     },
@@ -55,7 +58,10 @@ ShallowWrapper {
           <Route
             component={[Function]}
             exact={true}
-            path="/Rvsp"
+            path="/rvsp"
+/>,
+          <Route
+            component={[Function]}
 />,
         ],
       },
@@ -94,7 +100,18 @@ ShallowWrapper {
           "props": Object {
             "component": [Function],
             "exact": true,
-            "path": "/Rvsp",
+            "path": "/rvsp",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
           },
           "ref": null,
           "rendered": null,
@@ -125,7 +142,10 @@ ShallowWrapper {
           <Route
                     component={[Function]}
                     exact={true}
-                    path="/Rvsp"
+                    path="/rvsp"
+          />
+          <Route
+                    component={[Function]}
           />
 </Switch>,
       },
@@ -149,7 +169,10 @@ ShallowWrapper {
             <Route
               component={[Function]}
               exact={true}
-              path="/Rvsp"
+              path="/rvsp"
+/>,
+            <Route
+              component={[Function]}
 />,
           ],
         },
@@ -188,7 +211,18 @@ ShallowWrapper {
             "props": Object {
               "component": [Function],
               "exact": true,
-              "path": "/Rvsp",
+              "path": "/rvsp",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
             },
             "ref": null,
             "rendered": null,
