@@ -4,7 +4,38 @@ exports[`Invite renders 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Invite />,
+  Symbol(enzyme.__unrendered__): <Invite
+    invites={undefined}
+    onSend={[Function]}
+    store={
+        Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          }
+    }
+    storeSubscription={
+        Subscription {
+            "listeners": Object {
+              "notify": [Function],
+            },
+            "onStateChange": [Function],
+            "parentSub": undefined,
+            "store": Object {
+              "clearActions": [Function],
+              "dispatch": [Function],
+              "getActions": [Function],
+              "getState": [Function],
+              "replaceReducer": [Function],
+              "subscribe": [Function],
+            },
+            "unsubscribe": null,
+          }
+    }
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -17,36 +48,49 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <h1>
-        Invite
-</h1>,
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": "Invite",
-      },
-      "ref": null,
-      "rendered": "Invite",
-      "type": "h1",
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <h1>
+      "children": Array [
+        <h1>
           Invite
 </h1>,
-      },
-      "ref": null,
-      "rendered": Object {
+        <div>
+          <label>
+                    Nimi
+          </label>
+          <input
+                    className="input-name"
+                    id="name"
+                    onChange={[Function]}
+                    type="text"
+                    value=""
+          />
+</div>,
+        <div>
+          <label>
+                    Email
+          </label>
+          <input
+                    className="input-email"
+                    id="email"
+                    onChange={[Function]}
+                    type="email"
+                    value=""
+          />
+</div>,
+        <button
+          onClick={[Function]}
+>
+          Saada kutse!
+</button>,
+        <div>
+          <InviteList
+                    invites={Array []}
+          />
+</div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
@@ -57,6 +101,335 @@ ShallowWrapper {
         "rendered": "Invite",
         "type": "h1",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <label>
+              Nimi
+</label>,
+            <input
+              className="input-name"
+              id="name"
+              onChange={[Function]}
+              type="text"
+              value=""
+/>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Nimi",
+            },
+            "ref": null,
+            "rendered": "Nimi",
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "input-name",
+              "id": "name",
+              "onChange": [Function],
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <label>
+              Email
+</label>,
+            <input
+              className="input-email"
+              id="email"
+              onChange={[Function]}
+              type="email"
+              value=""
+/>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Email",
+            },
+            "ref": null,
+            "rendered": "Email",
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "input-email",
+              "id": "email",
+              "onChange": [Function],
+              "type": "email",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Saada kutse!",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Saada kutse!",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <InviteList
+            invites={Array []}
+/>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "invites": Array [],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            Invite
+</h1>,
+          <div>
+            <label>
+                        Nimi
+            </label>
+            <input
+                        className="input-name"
+                        id="name"
+                        onChange={[Function]}
+                        type="text"
+                        value=""
+            />
+</div>,
+          <div>
+            <label>
+                        Email
+            </label>
+            <input
+                        className="input-email"
+                        id="email"
+                        onChange={[Function]}
+                        type="email"
+                        value=""
+            />
+</div>,
+          <button
+            onClick={[Function]}
+>
+            Saada kutse!
+</button>,
+          <div>
+            <InviteList
+                        invites={Array []}
+            />
+</div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Invite",
+          },
+          "ref": null,
+          "rendered": "Invite",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <label>
+                Nimi
+</label>,
+              <input
+                className="input-name"
+                id="name"
+                onChange={[Function]}
+                type="text"
+                value=""
+/>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Nimi",
+              },
+              "ref": null,
+              "rendered": "Nimi",
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "input-name",
+                "id": "name",
+                "onChange": [Function],
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <label>
+                Email
+</label>,
+              <input
+                className="input-email"
+                id="email"
+                onChange={[Function]}
+                type="email"
+                value=""
+/>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Email",
+              },
+              "ref": null,
+              "rendered": "Email",
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "input-email",
+                "id": "email",
+                "onChange": [Function],
+                "type": "email",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Saada kutse!",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Saada kutse!",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <InviteList
+              invites={Array []}
+/>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "invites": Array [],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
+        },
+      ],
       "type": "div",
     },
   ],
