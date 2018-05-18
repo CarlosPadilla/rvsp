@@ -26,7 +26,8 @@
       "!src/index.js",
       "!src/tempPolyfills.js",
       "!src/setupTests.js",
-      "!src/store.js"
+      "!src/store.js",
+      "!src/mocks/*"
     ]
   },
   "devDependencies": {

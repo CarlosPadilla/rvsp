@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import * as actions from '../actions/invite';
 import { maxNumber } from '../helpers';
 import InviteList from '../components/InviteList/InviteList';
+import Input from '../components/Input/Input';
 
 class Invite extends Component {
   state = {
@@ -18,34 +19,47 @@ class Invite extends Component {
     });
   }
 
-  onSendHandler = (event) => {
-    event.preventDefault();
+  onSendHandler = () => {
     const { invites } = this.state;
     const send = {
-      id: maxNumber(this.state.invites.map(invite => invite.id)) + 1,
+      id: maxNumber(invites.map(invite => invite.id)) + 1,
       name: this.state.name,
       email: this.state.email,
     };
     invites.push(send);
-    this.props.onSend({ email: this.state.email, name: this.state.name });
+    this.props.onSend(send);
     this.setState({ name: '', email: '' });
   }
 
   render() {
     return (
       <div>
-        <h1>Invite</h1>
+        <h1>Saada kutse</h1>
         <div>
-          <label>Nimi</label>
-          <input id="name" className="input-name" type="text" value={this.state.name} onChange={this.onInputChange} />
+          <Input
+            label="Nimi"
+            field="name"
+            className="input-name"
+            type="text"
+            value={this.state.name}
+            onChange={this.onInputChange}
+          />
         </div>
         <div>
-          <label>Email</label>
-          <input id="email" className="input-email" type="email" value={this.state.email} onChange={this.onInputChange} />
+          <Input
+            label="Email"
+            field="email"
+            className="input-email"
+            type="email"
+            value={this.state.email}
+            onChange={this.onInputChange}
+          />
         </div>
-        <button onClick={this.onSendHandler}>Saada kutse!</button>
+        <button className="btn-send" onClick={this.onSendHandler}>Saada</button>
         <div>
-          <InviteList invites={this.state.invites} />
+          {
+            this.state.invites.length !== 0 ? <InviteList invites={this.state.invites} /> : null
+          }
         </div>
       </div>
     );

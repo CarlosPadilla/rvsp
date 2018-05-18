@@ -21,6 +21,38 @@ describe('Invite', () => {
     expect(invite.state().email).toEqual('')
   })
 
+  describe('when `send invite` is being pushed', () => {
+
+    const send = [
+      {
+        id: 1,
+        name: '',
+        email: ''
+      }
+    ]
+
+    beforeEach(() => {
+      invite.find('.btn-send').simulate('click')
+    })
+
+    afterEach(() => {
+      invite.setState({ invites: [] })
+    })
+
+    it('adds a new invite to `state`', () => {
+      expect(invite.state().invites).toEqual(send)
+    })
+
+    it('invitation has id', () => {
+      expect(invite.state().invites[0].id).toEqual(1)
+    })
+
+    it('renders a invite list', () => {
+      expect(invite.find('InviteList').exists()).toBe(true)
+    })
+
+  })
+
   describe('when typing in to name input', () => {
 
     const name = 'Aimar'

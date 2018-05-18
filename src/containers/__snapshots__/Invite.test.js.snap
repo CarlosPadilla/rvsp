@@ -50,42 +50,35 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <h1>
-          Invite
+          Saada kutse
 </h1>,
         <div>
-          <label>
-                    Nimi
-          </label>
-          <input
+          <Input
                     className="input-name"
-                    id="name"
+                    field="name"
+                    label="Nimi"
                     onChange={[Function]}
                     type="text"
                     value=""
           />
 </div>,
         <div>
-          <label>
-                    Email
-          </label>
-          <input
+          <Input
                     className="input-email"
-                    id="email"
+                    field="email"
+                    label="Email"
                     onChange={[Function]}
                     type="email"
                     value=""
           />
 </div>,
         <button
+          className="btn-send"
           onClick={[Function]}
 >
-          Saada kutse!
+          Saada
 </button>,
-        <div>
-          <InviteList
-                    invites={Array []}
-          />
-</div>,
+        <div />,
       ],
     },
     "ref": null,
@@ -95,10 +88,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Invite",
+          "children": "Saada kutse",
         },
         "ref": null,
-        "rendered": "Invite",
+        "rendered": "Saada kutse",
         "type": "h1",
       },
       Object {
@@ -106,118 +99,13 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            <label>
-              Nimi
-</label>,
-            <input
-              className="input-name"
-              id="name"
-              onChange={[Function]}
-              type="text"
-              value=""
-/>,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Nimi",
-            },
-            "ref": null,
-            "rendered": "Nimi",
-            "type": "label",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "className": "input-name",
-              "id": "name",
-              "onChange": [Function],
-              "type": "text",
-              "value": "",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "input",
-          },
-        ],
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <label>
-              Email
-</label>,
-            <input
-              className="input-email"
-              id="email"
-              onChange={[Function]}
-              type="email"
-              value=""
-/>,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Email",
-            },
-            "ref": null,
-            "rendered": "Email",
-            "type": "label",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "className": "input-email",
-              "id": "email",
-              "onChange": [Function],
-              "type": "email",
-              "value": "",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "input",
-          },
-        ],
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Saada kutse!",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "Saada kutse!",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <InviteList
-            invites={Array []}
+          "children": <Input
+            className="input-name"
+            field="name"
+            label="Nimi"
+            onChange={[Function]}
+            type="text"
+            value=""
 />,
         },
         "ref": null,
@@ -226,12 +114,74 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "invites": Array [],
+            "className": "input-name",
+            "field": "name",
+            "label": "Nimi",
+            "onChange": [Function],
+            "type": "text",
+            "value": "",
           },
           "ref": null,
           "rendered": null,
           "type": [Function],
         },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Input
+            className="input-email"
+            field="email"
+            label="Email"
+            onChange={[Function]}
+            type="email"
+            value=""
+/>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "className": "input-email",
+            "field": "email",
+            "label": "Email",
+            "onChange": [Function],
+            "type": "email",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Saada",
+          "className": "btn-send",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Saada",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": null,
+        },
+        "ref": null,
+        "rendered": null,
         "type": "div",
       },
     ],
@@ -245,42 +195,35 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <h1>
-            Invite
+            Saada kutse
 </h1>,
           <div>
-            <label>
-                        Nimi
-            </label>
-            <input
+            <Input
                         className="input-name"
-                        id="name"
+                        field="name"
+                        label="Nimi"
                         onChange={[Function]}
                         type="text"
                         value=""
             />
 </div>,
           <div>
-            <label>
-                        Email
-            </label>
-            <input
+            <Input
                         className="input-email"
-                        id="email"
+                        field="email"
+                        label="Email"
                         onChange={[Function]}
                         type="email"
                         value=""
             />
 </div>,
           <button
+            className="btn-send"
             onClick={[Function]}
 >
-            Saada kutse!
+            Saada
 </button>,
-          <div>
-            <InviteList
-                        invites={Array []}
-            />
-</div>,
+          <div />,
         ],
       },
       "ref": null,
@@ -290,10 +233,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Invite",
+            "children": "Saada kutse",
           },
           "ref": null,
-          "rendered": "Invite",
+          "rendered": "Saada kutse",
           "type": "h1",
         },
         Object {
@@ -301,118 +244,13 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              <label>
-                Nimi
-</label>,
-              <input
-                className="input-name"
-                id="name"
-                onChange={[Function]}
-                type="text"
-                value=""
-/>,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Nimi",
-              },
-              "ref": null,
-              "rendered": "Nimi",
-              "type": "label",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "className": "input-name",
-                "id": "name",
-                "onChange": [Function],
-                "type": "text",
-                "value": "",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "input",
-            },
-          ],
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <label>
-                Email
-</label>,
-              <input
-                className="input-email"
-                id="email"
-                onChange={[Function]}
-                type="email"
-                value=""
-/>,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Email",
-              },
-              "ref": null,
-              "rendered": "Email",
-              "type": "label",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "className": "input-email",
-                "id": "email",
-                "onChange": [Function],
-                "type": "email",
-                "value": "",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "input",
-            },
-          ],
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Saada kutse!",
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": "Saada kutse!",
-          "type": "button",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <InviteList
-              invites={Array []}
+            "children": <Input
+              className="input-name"
+              field="name"
+              label="Nimi"
+              onChange={[Function]}
+              type="text"
+              value=""
 />,
           },
           "ref": null,
@@ -421,12 +259,74 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "invites": Array [],
+              "className": "input-name",
+              "field": "name",
+              "label": "Nimi",
+              "onChange": [Function],
+              "type": "text",
+              "value": "",
             },
             "ref": null,
             "rendered": null,
             "type": [Function],
           },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Input
+              className="input-email"
+              field="email"
+              label="Email"
+              onChange={[Function]}
+              type="email"
+              value=""
+/>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "className": "input-email",
+              "field": "email",
+              "label": "Email",
+              "onChange": [Function],
+              "type": "email",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Saada",
+            "className": "btn-send",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Saada",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": null,
+          },
+          "ref": null,
+          "rendered": null,
           "type": "div",
         },
       ],
