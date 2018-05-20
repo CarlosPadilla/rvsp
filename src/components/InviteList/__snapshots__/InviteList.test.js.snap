@@ -33,28 +33,44 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <InviteListItem
-          invite={
-                    Object {
-                              "email": "aimar@snapit.ee",
-                              "id": 1,
-                              "name": "Aimar",
-                            }
-          }
+        <h3>
+          Saadetud Kutsed
+</h3>,
+        Array [
+          <InviteListItem
+            invite={
+                        Object {
+                                    "email": "aimar@snapit.ee",
+                                    "id": 1,
+                                    "name": "Aimar",
+                                  }
+            }
 />,
-        <InviteListItem
-          invite={
-                    Object {
-                              "email": "marju@domeca.ee",
-                              "id": 2,
-                              "name": "Marju",
-                            }
-          }
+          <InviteListItem
+            invite={
+                        Object {
+                                    "email": "marju@domeca.ee",
+                                    "id": 2,
+                                    "name": "Marju",
+                                  }
+            }
 />,
+        ],
       ],
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Saadetud Kutsed",
+        },
+        "ref": null,
+        "rendered": "Saadetud Kutsed",
+        "type": "h3",
+      },
       Object {
         "instance": null,
         "key": "1",
@@ -95,28 +111,44 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <InviteListItem
-            invite={
-                        Object {
-                                    "email": "aimar@snapit.ee",
-                                    "id": 1,
-                                    "name": "Aimar",
-                                  }
-            }
+          <h3>
+            Saadetud Kutsed
+</h3>,
+          Array [
+            <InviteListItem
+              invite={
+                            Object {
+                                          "email": "aimar@snapit.ee",
+                                          "id": 1,
+                                          "name": "Aimar",
+                                        }
+              }
 />,
-          <InviteListItem
-            invite={
-                        Object {
-                                    "email": "marju@domeca.ee",
-                                    "id": 2,
-                                    "name": "Marju",
-                                  }
-            }
+            <InviteListItem
+              invite={
+                            Object {
+                                          "email": "marju@domeca.ee",
+                                          "id": 2,
+                                          "name": "Marju",
+                                        }
+              }
 />,
+          ],
         ],
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Saadetud Kutsed",
+          },
+          "ref": null,
+          "rendered": "Saadetud Kutsed",
+          "type": "h3",
+        },
         Object {
           "instance": null,
           "key": "1",

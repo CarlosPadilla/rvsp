@@ -7,24 +7,29 @@ describe('invite reducer', () => {
     expect(reducer(undefined, {})).toEqual({})
   })
 
-  it('should handle SEND_INVITE', () => {
-    const invite = { name: 'Aimar', email: 'aimar@snapit.ee' }
+  it('should handle SEND_INVITE_START', () => {
     const startAction = {
-      type: types.SEND_INVITE,
-      invite
+      type: types.SEND_INVITE_START
     }
 
-    expect(reducer(null, startAction)).toEqual(invite)
+    expect(reducer({}, startAction)).toEqual({ error: null, loading: true})
   })
 
-  // it('sends an invite', () => {
-  //
-  //   const invite = { name: 'Aimar', email: 'aimar@snapit.ee' }
-  //
-  //   expect(inviteReducer(null, { type: types.SEND_INVITE, invite})).toEqual(invite)
-  // })
-  //
-  // it('returns default state if there\'s no action type provided', () => {
-  //   expect(inviteReducer(null, { type: types.TEST })).toEqual(null)
-  // })
+  it('should handle SEND_INVITE_SUCCESS', () => {
+    const successAction = {
+      type: types.SEND_INVITE_SUCCESS,
+    }
+
+    expect(reducer(null, successAction)).toEqual({ loading: false, success: true })
+  })
+
+  it('should handle SEND_INVITE_FAIL', () => {
+    const failAction = {
+      type: types.SEND_INVITE_FAIL,
+      error: { response: { data: 'uups'} }
+    }
+
+    expect(reducer(null, failAction)).toEqual({"error": "uups", "success": false})
+  })
+
 })

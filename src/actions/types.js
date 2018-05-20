@@ -1,2 +1,4 @@
-export const SEND_INVITE = 'SEND_INVITE';
+export const SEND_INVITE_START = 'SEND_INVITE_START';
+export const SEND_INVITE_SUCCESS = 'SEND_INVITE_SUCCESS';
+export const SEND_INVITE_FAIL = 'SEND_INVITE_FAIL';
 export const TEST = 'TEST';

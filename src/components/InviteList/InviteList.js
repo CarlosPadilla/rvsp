@@ -4,6 +4,7 @@ import ListItem from './InviteListItem';
 
 const InviteList = props => (
   <div>
+    <h3>Saadetud Kutsed</h3>
     {
       props.invites.map(invite => <ListItem key={invite.id} invite={invite} />)
     }
