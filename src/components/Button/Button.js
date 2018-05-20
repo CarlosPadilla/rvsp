@@ -10,11 +10,19 @@ const Button = styled.button`
   font-weight: bold;
   padding: 8px;
   border: 0;
+
+  &:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
 `;
 
-const PrimaryBtn = props => (
-  <Button onClick={props.onClick}>{props.children}</Button>
-);
+const PrimaryBtn = props =>
+  <Button onClick={props.onClick}>{props.children}</Button>;
+
+// PrimaryBtn.defaultProps = {
+//   disabled: '',
+// };
 
 PrimaryBtn.propTypes = {
   children: PropTypes.node.isRequired,

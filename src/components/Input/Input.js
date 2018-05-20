@@ -31,6 +31,7 @@ const Input = props => (
       type={props.type}
       value={props.value}
       onChange={props.onChange}
+      // onBlur={props.type === 'email' ? () => props.validate(props.value) : null}
     />
     {
       props.error ? <Error>{props.error}</Error> : null

@@ -25,3 +25,27 @@ export const sendInvite = invite => async (dispatch) => {
     dispatch(sendFail(error));
   }
 };
+
+export const startValidating = () => ({
+  type: types.VALIDATE_EMAIL_START,
+});
+
+export const validateSuccess = response => ({
+  type: types.VALIDATE_EMAIL_SUCCESS,
+  response,
+});
+
+export const validateError = error => ({
+  type: types.VALIDATE_EMAIL_FAIL,
+  error,
+});
+
+export const validateEmail = email => async (dispatch) => {
+  dispatch(startValidating());
+  try {
+    const res = await axios.post('http://localhost:5000/api/invites/validate', email);
+    dispatch(validateSuccess(res));
+  } catch (error) {
+    dispatch(validateError(error));
+  }
+};

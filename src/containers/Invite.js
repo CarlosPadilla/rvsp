@@ -41,6 +41,7 @@ class Invite extends Component {
   handleValidation = () => {
     const { name, email } = this.state;
     const errors = {};
+
     let formIsValid = true;
 
     if (!name) {
@@ -49,9 +50,9 @@ class Invite extends Component {
     }
 
     if (typeof name !== 'undefined') {
-      if (!name.match(/^[a-zA-Z]+$/)) {
+      if (!name.match(/^[a-zA-Z]+(?:[\s.]+[a-zA-Z]+)*$/g)) {
         formIsValid = false;
-        errors.name = 'Nimi peab sisaldama tähti';
+        errors.name = 'Nimi peab sisaldama ainult tähti';
       }
     }
 
@@ -70,16 +71,33 @@ class Invite extends Component {
       }
     }
 
+    if (this.props.error.email) {
+      formIsValid = false;
+      errors.email = this.props.error.email;
+    }
+
     this.setState({ errors });
     return formIsValid;
   };
 
   render() {
     const { name, email, errors } = this.state;
+    // console.log(this.props);
     return (
       <Wrapper>
         <Title>Saada kutse</Title>
         <Form>
+          <div>
+            <Input
+              label="Email"
+              field="email"
+              type="email"
+              value={email}
+              validate={this.validateEmailField}
+              onChange={this.onInputChange}
+              error={errors.email}
+            />
+          </div>
           <div>
             <Input
               label="Nimi"
@@ -90,21 +108,20 @@ class Invite extends Component {
               error={errors.name}
             />
           </div>
-          <div>
-            <Input
-              label="Email"
-              field="email"
-              type="email"
-              value={email}
-              onChange={this.onInputChange}
-              error={errors.email}
-            />
-          </div>
-          <Button onClick={this.onSendHandler}>Saada</Button>
+          <Alert>
+            {
+              !this.props.loading ? this.props.error.email : null
+            }
+          </Alert>
+          <Button onClick={this.onSendHandler}>
+            Saada
+          </Button>
         </Form>
         <div>
           {
-            this.state.invites.length !== 0 ? <InviteList invites={this.state.invites} /> : null
+            this.props.success
+              ? <InviteList invites={this.state.invites} />
+              : null
           }
         </div>
       </Wrapper>
@@ -118,16 +135,35 @@ const Wrapper = styled.div`
   background-color: #fff;
 `;
 
+const Alert = styled.div`
+  width: 100%;
+  text-align: center;
+  color: #EF476F;
+  margin-bottom: 16px;
+`;
+
 const mapStateToProps = state => ({
-  invites: state.invites,
+  error: state.invite.error,
+  success: state.invite.success,
+  loading: state.invite.loading,
 });
 
 const mapDispatchToProps = dispatch => ({
   onSend: invite => dispatch(actions.sendInvite(invite)),
+  validateEmail: email => dispatch(actions.validateEmail(email)),
 });
+
+Invite.defaultProps = {
+  error: {},
+  success: false,
+  loading: false,
+};
 
 Invite.propTypes = {
   onSend: PropTypes.func.isRequired,
+  error: PropTypes.shape({ email: PropTypes.string }),
+  success: PropTypes.bool,
+  loading: PropTypes.bool,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Invite);
